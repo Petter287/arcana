@@ -65,6 +65,9 @@ Cañones seleccionados: C1, C2 y C4
 Número mínimo: 3 cañones activados
 ```
 
+<details>
+<summary>Solución</summary>
+
 ## Idea de resolución
 
 El problema puede verse como una variante de **cobertura de intervalos**: se necesita cubrir completamente el intervalo $[L, R]$ usando la menor cantidad posible de segmentos.
@@ -141,3 +144,5 @@ La complejidad espacial es:
 $$O(n)$$
 
 por almacenar los intervalos y la solución seleccionada.
+
+</details>
