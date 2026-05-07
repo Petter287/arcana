@@ -66,9 +66,7 @@ Número mínimo: 3 cañones activados
 ```
 
 <details>
-<summary>Solución</summary>
-
-## Idea de resolución
+<summary>Idea de resolución</summary>
 
 El problema puede verse como una variante de **cobertura de intervalos**: se necesita cubrir completamente el intervalo $[L, R]$ usando la menor cantidad posible de segmentos.
 
@@ -83,7 +81,10 @@ Es decir:
 5. avanzar el punto actual hasta ese extremo derecho;
 6. repetir hasta cubrir $R$.
 
-## Pseudocódigo
+</details>
+
+<details>
+<summary>Pseudocódigo</summary>
 
 ```text
 cubrirMuro(cañones, L, R):
@@ -119,7 +120,10 @@ cubrirMuro(cañones, L, R):
     devolver seleccionados
 ```
 
-## Justificación de optimalidad
+</details>
+
+<details>
+<summary>Justificación de optimalidad</summary>
 
 En cada paso, el algoritmo considera todos los cañones que pueden cubrir el primer punto del muro que aún no está protegido. Cualquier solución válida necesariamente debe elegir alguno de esos cañones, porque si no, ese punto quedaría descubierto.
 
@@ -127,7 +131,10 @@ Entre esas opciones, elegir el cañón que llega más lejos nunca perjudica la s
 
 Este argumento permite reemplazar la primera elección de una solución óptima por la elección ávida sin aumentar la cantidad total de cañones. Repitiendo el razonamiento en cada iteración, se obtiene una solución óptima.
 
-## Complejidad
+</details>
+
+<details>
+<summary>Complejidad</summary>
 
 Sea $n$ la cantidad de cañones disponibles.
 
